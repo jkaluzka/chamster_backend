@@ -1,0 +1,12 @@
+todo:
+- some models could have counters applied in admin web ui
+- rest api paginations
+- input params validation in datatest data propagation scripts
+- extra scripts for test conflicting data
+- more data is needed in test scripts
+- add swagger ui for rest api documentation
+- better handling query params for GET requests in EventApi class
+- event db registration timestamp?
+- projecttype refactoring - new fields are needed: group projects description,
+  single project description
+- project name could be saved in settings.py module

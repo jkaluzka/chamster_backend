@@ -1,0 +1,5 @@
+django==1.7.11
+djangorestframework==3.3.2
+model_mommy==1.2.6
+coverage==4.0.3
+django-cors-headers==1.1.0
