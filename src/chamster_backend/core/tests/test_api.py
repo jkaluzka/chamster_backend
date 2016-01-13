@@ -416,17 +416,16 @@ class FlowApiTestCases(TestCase):
             comments="comments related to this project",
         )
         project2.save()
-
-#        resp = self.client.post(
-#            "/api/flows/",
-#            {
-#                "number": 7,
-#                "work_project": project.work_project,
-#                "timestamp": "2015-12-23T12:34:56.000Z",
-#                "status": 0,
-#                "comments": "comments related to project",
-#            })
-#        self.assertEqual(resp.status_code, HTTP_400_BAD_REQUEST)
+        resp = self.client.post(
+            "/api/flows/",
+            {
+                "number": 7,
+                "work_project": project.work_project,
+                "timestamp": "2015-12-23T12:34:56.000Z",
+                "status": 0,
+                "comments": "comments related to project",
+            })
+        self.assertEqual(resp.status_code, HTTP_400_BAD_REQUEST)
 
     def test_post_raise_400_when_project_not_found(self):
         resp = self.client.post(
