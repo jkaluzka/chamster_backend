@@ -420,7 +420,7 @@ class FlowApiTestCases(TestCase):
             "/api/flows/",
             {
                 "number": 7,
-                "work_project": project.work_project,
+                "work_project": project2.work_project,
                 "timestamp": "2015-12-23T12:34:56.000Z",
                 "status": 0,
                 "comments": "comments related to project",
