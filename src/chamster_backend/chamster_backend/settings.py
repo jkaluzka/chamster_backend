@@ -31,8 +31,8 @@ if DEBUG:
     print 'TEMPLATE_DIRS =', TEMPLATE_DIRS
     print 'STATIC_DIR_PATH =', STATIC_DIR_PATH
 
-HOST_PORT = '8000'
-HOST_URL = 'http://127.0.0.1:' + HOST_PORT + '/'
+API_PORT = '8000'
+API_URL = 'http://127.0.0.1:' + API_PORT + '/'
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
