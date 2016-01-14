@@ -194,7 +194,7 @@ class EventApi(APIView):
             comments = 'registered automatically by event: %s (timestamp: %s)' % (data.get('event_type'), data.get('timestamp'))
             new_flow = Flow(project=project, number=flow_number, timestamp=timestamp, status=STATUS_SUCCESS, comments=comments)
             new_flow.save()
-            print 'created new flow entry: {'number': %s, 'project': %s, 'timestamp': '%s', 'comments': '%s'}' % (str(flow_number), str(project_id), timestamp, comments)
+            print "created new flow entry: {'number': %s, 'project': %s, 'timestamp': '%s', 'comments': '%s'}" % (str(flow_number), str(project_id), timestamp, comments)
             flow_id = new_flow.id
 
         data['flow'] = flow_id
