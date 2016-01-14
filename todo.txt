@@ -1,5 +1,6 @@
 todo:
 - some models could have counters applied in admin web ui
+- admin forms - django 1.8 warnings
 - rest api paginations
 - input params validation in datatest data propagation scripts
 - extra scripts for test conflicting data
@@ -10,3 +11,19 @@ todo:
 - projecttype refactoring - new fields are needed: group projects description,
   single project description
 - project name could be saved in settings.py module
+- add coverage computation
+- add readme.md file
+- convert to django app (packaging)
+- timestamp warnings
+-
+
+
+done:
++ license file
++ syntax refactoring " -> '
++ added .gitignore file
++ travis.yml + tests
++ refactoring HOST_PORT -> API_PORT
++ refactoring HOST_URL -> API_URL
+-
+
