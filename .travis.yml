@@ -5,10 +5,10 @@ python:
 
 #installing dependencies
 install:
-    pip2 install -r requirements.txt
+    - pip2 install -r requirements.txt
 
 #running the tests
 script:
-    cd src/chamster_backend
-    python2 manage.py test core/tests/
+    - cd src/chamster_backend
+    - python2 manage.py test core/tests/
 
