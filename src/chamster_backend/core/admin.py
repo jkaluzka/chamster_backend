@@ -19,6 +19,7 @@ class ProjectForm(forms.ModelForm):
 
     class Meta:
         model = Project
+        fields = ('project_type', 'base_project', 'work_project', 'project_url', 'comments')
         widgets = {
             'base_project': TextInput(attrs={'size': 64}),
             'work_project': TextInput(attrs={'size': 64}),
@@ -38,6 +39,7 @@ class FlowForm(forms.ModelForm):
 
     class Meta:
         model = Flow
+        fields = ('project', 'number', 'timestamp', 'status', 'comments')
         widgets = {
             'comments': TextInput(attrs={'size': 64}),
         }
@@ -55,6 +57,7 @@ class EventTypeForm(forms.ModelForm):
 
     class Meta:
         model = EventType
+        fields = ('name', 'comments')
         widgets = {
             'name': TextInput(attrs={'size': 64}),
         }
@@ -71,6 +74,7 @@ class EventForm(forms.ModelForm):
 
     class Meta:
         model = Event
+        fields = ('flow', 'event_type', 'user', 'timestamp', 'comments')
         widgets = {
             'comments': TextInput(attrs={'size': 64}),
         }
