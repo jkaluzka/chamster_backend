@@ -10,8 +10,7 @@ todo:
 - projecttype refactoring - new fields are needed: group projects description,
   single project description
 - project name could be saved in settings.py module
-- add coverage computation
-- add readme.md file
+- add coverage howto
 - convert to django app (packaging)
 - timestamp warnings
 -
@@ -25,5 +24,6 @@ done:
 + refactoring HOST_PORT -> API_PORT
 + refactoring HOST_URL -> API_URL
 + admin forms - django 1.8 warnings
++ added simple readme.md file
 -
 
