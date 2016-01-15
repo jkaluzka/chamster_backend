@@ -1,15 +1,21 @@
 import datetime
 
-from core.models import ProjectType
-from core.serializers import ProjectTypeSerializer
-from core.models import Project
-from core.serializers import ProjectSerializer
-from core.models import Flow
-from core.serializers import FlowSerializer
-from core.models import EventType
-from core.serializers import EventTypeSerializer
-from core.models import Event
-from core.serializers import EventSerializer
+from django.utils import timezone
+
+from core.models import (
+    Project,
+    ProjectType,
+    Flow,
+    Event,
+    EventType,
+)
+from core.serializers import (
+    ProjectTypeSerializer,
+    ProjectSerializer,
+    FlowSerializer,
+    EventTypeSerializer,
+    EventSerializer,
+)
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -190,7 +196,7 @@ class EventApi(APIView):
         except:
             print 'warning! could not find flow %s for project %s/%s' % (str(flow_number), data.get('base_project'), data.get('work_project'))
             print 'new flow entry will be registered automatically...'
-            timestamp = str(datetime.datetime.now())
+            timestamp = str(timezone.now())
             comments = 'registered automatically by event: %s (timestamp: %s)' % (data.get('event_type'), data.get('timestamp'))
             new_flow = Flow(project=project, number=flow_number, timestamp=timestamp, status=STATUS_SUCCESS, comments=comments)
             new_flow.save()
